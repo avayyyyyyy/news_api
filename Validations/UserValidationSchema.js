@@ -6,3 +6,8 @@ export const UserSchema = zod.object({
   password: zod.string().min(6),
   profile: zod.string().optional(),
 });
+
+export const loginSchema = zod.object({
+  email: zod.string().email("This is not a valid mail"),
+  password: zod.string().min(6),
+});
